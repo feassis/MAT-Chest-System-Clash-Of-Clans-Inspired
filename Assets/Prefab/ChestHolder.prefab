@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 3862024132286255086}
   - component: {fileID: 8382868059396161472}
   - component: {fileID: 2305037197610866928}
+  - component: {fileID: 6416001381718482046}
   m_Layer: 0
   m_Name: ChestHolder
   m_TagString: Untagged
@@ -199,6 +200,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &6416001381718482046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6167704942031561078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 431c6befb1d2f95479924edc1550a455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1961331936767504965
 PrefabInstance:
   m_ObjectHideFlags: 0

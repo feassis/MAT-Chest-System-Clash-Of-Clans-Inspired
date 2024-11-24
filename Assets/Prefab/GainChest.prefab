@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4721250937069965253}
   - component: {fileID: 2718159867865651187}
   - component: {fileID: 9021191013490326058}
+  - component: {fileID: 7823190815411185749}
   m_Layer: 0
   m_Name: GainChest
   m_TagString: Untagged
@@ -124,6 +125,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7823190815411185749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104791168562298318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13ffedaa9ed7bf4495aad950fb76777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1937873306121279341
 GameObject:
   m_ObjectHideFlags: 0

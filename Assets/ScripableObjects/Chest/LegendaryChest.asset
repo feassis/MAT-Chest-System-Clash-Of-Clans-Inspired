@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098235132b19e59468fedbb2b8cac5e5, type: 3}
+  m_Name: LegendaryChest
+  m_EditorClassIdentifier: 
+  MinimunCoinCost: 220
+  MaxCoinCost: 400
+  MinimunCrystalCost: 30
+  MaxCrystalCost: 40
+  MinimunCoinReward: 1000
+  MaxCoinReward: 1200
+  MinimunCrystalReward: 80
+  MaxCrystalReward: 1000
+  Timer: 10800
+  Sprite: {fileID: -1555440764, guid: 2fc7a03484d27374294d49ef17c7916e, type: 3}

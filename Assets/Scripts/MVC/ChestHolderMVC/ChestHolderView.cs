@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChestHolderView : MonoBehaviour
 {
+    [SerializeField] private Transform slotHolder;
     private ChestHolderController controller;
     
     public void SetController(ChestHolderController controller)
@@ -11,5 +12,8 @@ public class ChestHolderView : MonoBehaviour
         this.controller = controller;
     }
 
-
+    public Transform GetSlotHolder()
+    {
+        return slotHolder;
+    }
 }

@@ -137,6 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13ffedaa9ed7bf4495aad950fb76777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconImage: {fileID: 5278848614804589082}
+  currencyIcon: {fileID: 3872953178070982923}
+  coinSprite: {fileID: 1954563645, guid: c5e0965bb249ab2488d4e772af463ae9, type: 3}
+  crystalSprite: {fileID: 21300004, guid: 0c9b1d0b2a4552241a19ab70af3b4ee3, type: 3}
+  currencyAmountText: {fileID: 2507566634910688861}
+  buyButtonClicked: {fileID: 9021191013490326058}
 --- !u!1 &1937873306121279341
 GameObject:
   m_ObjectHideFlags: 0

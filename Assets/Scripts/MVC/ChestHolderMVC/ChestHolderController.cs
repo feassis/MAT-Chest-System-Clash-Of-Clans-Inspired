@@ -56,6 +56,25 @@ public class ChestHolderController
         }
 
         availableSlot.AddChest(chestReward, config);
+
+        if (!HasSlotActive())
+        {
+            availableSlot.SetSlotActive(true);
+        }
+
+    }
+
+    private bool HasSlotActive()
+    {
+        foreach (var slot in slots)
+        {
+            if (slot.IsSlotActive())
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private int GetUpgradeCost()

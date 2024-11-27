@@ -5,6 +5,7 @@
     public ChestConfigScriptableObject ChestConfig;
     public ChestReward ChestReward;
     private ChestSlotController controller;
+    private bool isActive;
 
     public ChestSlotModel(ChestSlotMode mode, int upgradeCost)
     {
@@ -16,4 +17,11 @@
     {
         this.controller = controller;
     }
+
+    public void SetIsActive(bool isActive)
+    {
+        this.isActive = isActive;
+    }
+
+    public bool GetIsActive() => isActive;
 }

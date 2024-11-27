@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ChestSlotView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject timerBG;
     [SerializeField] private GameObject timerHolder;
     [SerializeField] private TextMeshProUGUI crystalCostText;
     [SerializeField] private Image icon;
@@ -16,6 +17,11 @@ public class ChestSlotView : MonoBehaviour
     [SerializeField] private Button button;
 
     private ChestSlotController controller;
+
+    private void Update()
+    {
+        controller.UpdateTimer();
+    }
 
     public void SetController(ChestSlotController controller)
     {
@@ -48,7 +54,12 @@ public class ChestSlotView : MonoBehaviour
         }
     }
 
-    private void ToggleCrystalAmount(bool isActive)
+    public void ShowTimerIsActive(bool isActive)
+    {
+        timerBG.gameObject.SetActive(isActive);
+    }
+
+    public void ToggleCrystalAmount(bool isActive)
     {
         crystalCostText.gameObject.SetActive(isActive);
         crystalIcon.gameObject.SetActive(isActive);
@@ -57,6 +68,11 @@ public class ChestSlotView : MonoBehaviour
     public void SetChestIcon(Sprite chestIcon)
     {
         icon.sprite = chestIcon;
+    }
+
+    public void UpdateCostText(int cost)
+    {
+        crystalCostText.text = cost.ToString();
     }
 
     public void SetTimerText(float timer)

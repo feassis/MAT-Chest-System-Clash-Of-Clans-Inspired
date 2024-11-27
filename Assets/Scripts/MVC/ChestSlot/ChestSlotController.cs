@@ -28,6 +28,8 @@ public class ChestSlotController
                 break;
             case ChestSlotMode.Filled:
                 chestlockedTimer = model.ChestConfig.Timer;
+                view.ShowTimerIsActive(model.GetIsActive());
+                view.SetTimerText(chestlockedTimer);
                 break;
         }
 
@@ -37,9 +39,29 @@ public class ChestSlotController
     public ChestSlotMode GetSlotMode() => model.Mode;
     public ChestReward GetReward() => model.ChestReward;
 
+    public void SetSlotActive(bool active)
+    {
+        model.SetIsActive(active);
+        view.ShowTimerIsActive(active);
+        view.UpdateCostText(GetPriceToOpenChest());
+        view.ToggleCrystalAmount(active);
+    }
+
     private int GetPriceToOpenChest()
     {
         return Mathf.CeilToInt(chestlockedTimer / model.ChestConfig.CrystalIncrementTime);
+    }
+
+    public void UpdateTimer()
+    {
+        if(!IsSlotActive())
+        {
+            return;
+        }
+
+        chestlockedTimer = Mathf.Max(0, chestlockedTimer - Time.deltaTime);
+        view.SetTimerText(chestlockedTimer);
+        view.UpdateCostText(GetPriceToOpenChest());
     }
 
     public void UpdateMode()
@@ -66,6 +88,8 @@ public class ChestSlotController
 
         ChangeMode(ChestSlotMode.Filled);
     }
+
+    public bool IsSlotActive() => model.GetIsActive();
 
     public void EmptyChest()
     {

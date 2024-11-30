@@ -33,6 +33,11 @@ public class ChestService
     {
         uiService.GetChestHolder().RemoveChest(chestReward);
     }
+
+    public ChestHolderController GetChestHolder()
+    {
+        return uiService.GetChestHolder();
+    }
 }
 
 public class ChestReward

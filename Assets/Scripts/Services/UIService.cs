@@ -47,21 +47,21 @@ public class UIService : MonoBehaviour
         this.commandInvolker = commandInvolker;
         ChestHolderModel chestHolderModel = new ChestHolderModel(chestHolderScriptableObject.InitialUnlockedSlots, 
             chestHolderScriptableObject.InitialUnlockCost, chestHolderScriptableObject.IncrementUnlockCost, chestHolderScriptableObject.chestSlotPrefab);
-        chestHolderController = new ChestHolderController(chestHolderViewPrefab, chestHolderModel, uiRoot);
+        chestHolderController = new ChestHolderController(chestHolderViewPrefab, chestHolderModel, uiRoot, this.walletService, this.chestService, this.commandInvolker, this.eventService);
 
         BuyChestButtonModel coinBuyButtomModel = new BuyChestButtonModel(CurrencyType.Coins);
         coinBuyButtomController = new BuyChestButtonController(coinBuyButtomModel, buyChestViewPrefab, buyButtonRoot,
-            chestService, walletService, commandInvolker);
+            this.chestService, this.walletService, this.commandInvolker);
 
         BuyChestButtonModel crystalsBuyButtomModel = new BuyChestButtonModel(CurrencyType.Crystals);
-        crystalsBuyButtomController = new BuyChestButtonController(crystalsBuyButtomModel, buyChestViewPrefab, buyButtonRoot, 
-            chestService, walletService, commandInvolker);
+        crystalsBuyButtomController = new BuyChestButtonController(crystalsBuyButtomModel, buyChestViewPrefab, buyButtonRoot,
+            this.chestService, this.walletService, this.commandInvolker);
 
         WalletModel coinModel = new WalletModel(CurrencyType.Coins);
-        coinWallet = new WalletController(walletViewPrefab, coinModel, walletRoot, walletService, eventService);
+        coinWallet = new WalletController(walletViewPrefab, coinModel, walletRoot, this.walletService, this.eventService);
 
         WalletModel crystalModel = new WalletModel(CurrencyType.Crystals);
-        crystalWallet = new WalletController(walletViewPrefab, crystalModel, walletRoot, walletService, eventService);
+        crystalWallet = new WalletController(walletViewPrefab, crystalModel, walletRoot, this.walletService, this.eventService);
 
 
         gatherButton.onClick.AddListener(OnGatherButtonClicked);

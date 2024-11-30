@@ -21,4 +21,5 @@ MonoBehaviour:
   MinimunCrystalReward: 20
   MaxCrystalReward: 40
   Timer: 1800
+  CrystalIncrementTime: 60
   Sprite: {fileID: -1736185539, guid: 2fc7a03484d27374294d49ef17c7916e, type: 3}

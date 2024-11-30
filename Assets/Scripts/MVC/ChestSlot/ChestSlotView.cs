@@ -51,6 +51,10 @@ public class ChestSlotView : MonoBehaviour
                 icon.gameObject.SetActive(true);
                 timerHolder.gameObject.SetActive(true);
                 break;
+            case ChestSlotMode.Ready:
+                timerHolder.gameObject.SetActive(false);
+                ToggleCrystalAmount(false);
+                break;
         }
     }
 
@@ -85,5 +89,10 @@ public class ChestSlotView : MonoBehaviour
         {
             timerHolder.gameObject.SetActive(false);
         }
+    }
+
+    public void DestroyView()
+    {
+        Destroy(gameObject);
     }
 }
